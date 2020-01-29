@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import styled from "styled-components";
 
 const EditHeader = styled.form`
-    width: 650px;
+    width: 700px;
     margin: 0 auto;
     border: 1px solid black;
     padding-bottom: 20px;
@@ -11,7 +11,7 @@ const EditHeader = styled.form`
 `;
 
 const TeamCard = styled.div`
-    max-width: 650px;
+    max-width: 700px;
     margin: 0 auto;
     margin-top: 50px; 
     border-radius: 25px 50px; 
@@ -27,7 +27,6 @@ const EditChild = styled.div`
 
 const EditMember = styled.h1`
     color: black;
-    
 `;
 
 const EditButton = styled.button`
@@ -63,7 +62,7 @@ const Members = (props) => {
 
     const handleChange = event => {
         event.preventDefault();
-        props.update(input);
+        props.memberToEdit(input);
         setEditing(false);
     };
 

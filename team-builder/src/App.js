@@ -9,7 +9,7 @@ function App() {
 
   const submitMember = member => setMembers([...members, member]);
 
-  const update = updatedMember =>
+  const memberToEdit = updatedMember =>
     setMembers([
       ...members.map(member => {
         if (member.id === updatedMember.id) {
@@ -24,7 +24,7 @@ function App() {
     <div className="App">
         <Form add={submitMember} />
         {members.map((member, i) => (
-          <Members member={member} key={i} update={update} />
+          <Members member={member} key={i} memberToEdit={memberToEdit} />
         ))}
     </div>
   );
