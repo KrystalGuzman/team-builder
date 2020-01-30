@@ -5,7 +5,18 @@ import Form from "./components/Form";
 import Members from "./components/Members";
 
 function App() {
-  const [members, setMembers] = useState([]);
+  const [members, setMembers] = useState([{
+    id: 1,
+    name: "Krystal",
+    email: "kryguzman@gmail.com",
+    role: "student"
+      },
+    {id: 2,
+    name: "Krystal Guzman",
+    email: "something@gmail.com",
+    role: "Web Dev"
+      }
+    ]);
 
   const submitMember = member => setMembers([...members, member]);
 

@@ -44,7 +44,7 @@ const Form = (props) => {
 
     const submitHandler = event => {
         event.preventDefault();
-        props.add({...input, id: Math.random() })
+        props.add({...input, id: Date.now() })
         setInput({ name: "", email: "", role: "" });
     }
     console.log("props", props);
@@ -66,7 +66,7 @@ const Form = (props) => {
                 <label htmlFor="email">Email: {""}
                     <input 
                         id= "email"
-                        type= "text"
+                        type= "email"
                         name= "email"
                         onChange= {inputHandler}
                         value={input.email}

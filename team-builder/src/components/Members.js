@@ -85,7 +85,7 @@ const Members = (props) => {
                 <label htmlFor="email">Email: {" "}
                     <input 
                         id= "email"
-                        type= "text"
+                        type= "email"
                         name= "email"
                         onChange= {inputHandler}
                         value={input.email}
